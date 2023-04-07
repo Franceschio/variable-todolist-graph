@@ -84,7 +84,11 @@ const createTodo = (obj) => {
       uncompleted.style.height = `${uncomMedia * 50}px`;
       completed.style.height = `${compMedia - 150}px`;
       uncomPercentage = (uncomp * 333.33).toFixed() / 100;
-      uncompCheck.textContent = `${uncomPercentage}%`;
+      if (uncomPercentage === 0) {
+        uncompCheck.style.display = "none";
+      } else {
+        uncompCheck.textContent = `${uncomPercentage}%`;
+      }
       if (compPercentage > uncomPercentage) {
         reminder.textContent = "You're going well! Keep this flow.";
         reminder.style.color = "#00d900";
@@ -111,7 +115,11 @@ const createTodo = (obj) => {
       completed.style.height = `${compMedia * 50}px`;
       uncompleted.style.height = `${uncomMedia - 150}px`;
       compPercentage = (comp * 333.33).toFixed() / 100;
-      compCheck.textContent = `${compPercentage}%`;
+      if (compPercentage === 0) {
+        compCheck.style.display = "none";
+      } else {
+        compCheck.textContent = `${compPercentage}%`;
+      }
       if (compPercentage > uncomPercentage) {
         reminder.textContent = "You're going well! Keep this flow.";
         reminder.style.color = "#00d900";

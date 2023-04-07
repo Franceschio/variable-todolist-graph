@@ -84,7 +84,7 @@ main {
 }
 
 footer {
-  height: 70%;
+  padding: 10px;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -123,7 +123,7 @@ footer {
 
 .graphic {
   border: 1px solid rgb(156, 155, 155);
-  height: 350px;
+  padding: 10px;
   width: 350px;
   display: flex;
   justify-content: center;
@@ -144,7 +144,6 @@ footer {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-top: none;
-  max-height: 100%;
 }
 
 .uncompleted {
@@ -158,7 +157,6 @@ footer {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-top: none;
-  max-height: 100%;
 }
 
 .percentage {
