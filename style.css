@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+body h1 {
+  color: white;
+}
+
+main {
+  margin: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.todo {
+  height: 220px;
+  width: 300px;
+  text-align: center;
+  color: black;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid rgb(103, 103, 103);
+  transition: 0.8s;
+  overflow: hidden;
+}
+
+.todo:hover {
+  height: 200px;
+  width: 260px;
+  transform: scale(1.1);
+  border-radius: 15px;
+}
+
+.text {
+  padding: 10px;
+  height: 50%;
+  width: 100%;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check {
+  padding: 5px;
+  height: 50%;
+  width: 100%;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: 0.7s;
+  transform: translateY(200px);
+  cursor: default;
+  background-color: black;
+  border-radius: 20px;
+}
+
+.todo:hover .check {
+  transform: translateY(0px);
+}
+
+.isChecked {
+  cursor: pointer;
+}
+
+footer {
+  height: 70%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 1px solid rgb(103, 103, 103);
+  background-color: black;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.indication {
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 8px;
+  cursor: default;
+}
+
+.square {
+  height: 15px;
+  width: 15px;
+  border: 1px solid rgb(156, 155, 155);
+}
+
+#firstSquare {
+  background-color: rgb(0, 255, 0);
+}
+
+#secondSquare {
+  background-color: red;
+}
+
+.graphic {
+  border: 1px solid rgb(156, 155, 155);
+  height: 350px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: black;
+  transform: rotate(180deg);
+  border-radius: 1px;
+}
+
+.completed {
+  width: 50px;
+  background-color: rgb(0, 255, 0);
+  border: 1px solid rgb(156, 155, 155);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+  max-height: 100%;
+}
+
+.uncompleted {
+  width: 50px;
+  background-color: red;
+  border: 1px solid rgb(156, 155, 155);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+  max-height: 100%;
+}
+
+.percentage {
+  color: black;
+  z-index: 3;
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 75%;
+  }
+
+  .graphic {
+    height: 70%;
+    width: 70%;
+    font-size: 10px;
+  }
+
+  .completed,
+  .uncompleted {
+    width: 40px;
+  }
+}
